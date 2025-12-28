@@ -44,7 +44,30 @@
             <span class="legend-item"><span class="legend-color" style="background: #216e39;"></span>100%</span>
         </div>
     </div>
-    
-    <script src="script.js"></script>
+
+    <!-- Firebase SDK -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
+  import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBcgjXffyWvPp1A_bD8RBBahVNId4LtGnQ",
+  authDomain: "daily-consistency-tracker.firebaseapp.com",
+  projectId: "daily-consistency-tracker",
+  storageBucket: "daily-consistency-tracker.firebasestorage.app",
+  messagingSenderId: "914447292280",
+  appId: "1:914447292280:web:1acaea1ad44103d215da8d",
+  measurementId: "G-6QRRJ2PXL6"
+};
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+  window.db = db;
+</script>
+
+<!-- Original script.js -->
+<script type="module" src="script.js"></script>
+
+  
 </body>
 </html>
