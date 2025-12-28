@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Consistency Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="app-title" class="editable-title" contenteditable="true">My Consistency Tracker</h1>
+            <p id="current-date">Loading date...</p>
+        </header>
+        
+        <section class="tasks-section">
+            <h2>Today's Tasks</h2>
+            <div class="add-task-form">
+                <input type="text" id="new-task-input" placeholder="Enter new task..." maxlength="50">
+                <button id="add-task-btn">Add Task</button>
+            </div>
+            <p class="progress-text">Completed: <span id="completed-count">0</span>/<span id="total-count">0</span></p>
+            <ul id="task-list" class="task-list"></ul>
+        </section>
+        
+        <section class="calendar-section">
+            <div class="calendar-header">
+                <button id="prev-month-btn" class="nav-btn">&lt;</button>
+                <h2 id="calendar-title">Monthly Consistency</h2>
+                <button id="next-month-btn" class="nav-btn">&gt;</button>
+            </div>
+            <div class="weekday-labels">
+                <span>Sun</span><span>Mon</span><span>Tue</span>
+                <span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+            </div>
+            <div id="calendar-grid" class="calendar-grid"></div>
+        </section>
+        
+        <div class="legend">
+            <span class="legend-item"><span class="legend-color" style="background: #ebedf0;"></span>0%</span>
+            <span class="legend-item"><span class="legend-color" style="background: #fff3b0;"></span>1-25%</span>
+            <span class="legend-item"><span class="legend-color" style="background: #ffe066;"></span>26-50%</span>
+            <span class="legend-item"><span class="legend-color" style="background: #8cc665;"></span>51-75%</span>
+            <span class="legend-item"><span class="legend-color" style="background: #216e39;"></span>100%</span>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
